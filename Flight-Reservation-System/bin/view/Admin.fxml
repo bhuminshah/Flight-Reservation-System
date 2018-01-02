@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Admin.AdminController">
+   <children>
+      <Label accessibleRole="HYPERLINK" layoutX="18.0" layoutY="-6.0" prefHeight="87.0" prefWidth="282.0" text="Papa Airlines" textAlignment="CENTER" textFill="#d78441" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Forte" size="33.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="20.0" layoutY="55.0" prefHeight="325.0" prefWidth="825.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="User" onSelectionChanged="#prc_viewUser" text="User">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="800.0">
+                     <children>
+                        <TableView fx:id="Users" layoutX="25.0" layoutY="20.0" prefHeight="250.0" prefWidth="600.0" />
+                        <Button fx:id="Add" layoutX="678.0" layoutY="99.0" mnemonicParsing="false" onAction="#prc_addUser" prefHeight="30.0" prefWidth="110.0" text="Add">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="Edit" layoutX="678.0" layoutY="173.0" mnemonicParsing="false" onAction="#prc_editUser" prefHeight="30.0" prefWidth="110.0" text="Edit">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="Delete" layoutX="678.0" layoutY="241.0" mnemonicParsing="false" onAction="#prc_deleteUser" prefHeight="30.0" prefWidth="110.0" text="Delete">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="14.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="airport" onSelectionChanged="#prc_viewAirport" text="Airport">
+               <content>
+              	  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Airport" layoutX="25.0" layoutY="20.0" prefHeight="250.0" prefWidth="600.0" />
+                        <Button fx:id="AddAirport" layoutX="673.0" layoutY="240.0" mnemonicParsing="false" onAction="#prc_addAirport" prefHeight="30.0" prefWidth="110.0" text="Add">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="14.0" />
+                           </font></Button>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="Logout_admin" layoutX="735.0" layoutY="18.0" mnemonicParsing="false" onAction="#prc_logout" prefHeight="30.0" prefWidth="110.0" text="Logout">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
